@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Aritmética</title>
+</head>
+<body>
+  <div id="app">
+    <div>
+      <input type="number" v-model="numero1" @input="calcularResultado">
+      <select v-model="operacao" @change="calcularResultado">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="number" v-model="numero2" @input="calcularResultado">
+    </div>
+    <div>Resultado: {{ resultado }}</div>
+  </div>
+
+  <!-- Importe o Vue -->
+  <script src="https://unpkg.com/vue@next"></script>
+  <!-- Importe o arquivo app.js -->
+  <script src="app.js"></script>
+</body>
+</html>
+
+
